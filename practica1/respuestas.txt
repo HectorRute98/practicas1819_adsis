@@ -1,0 +1,7 @@
+1. Busca la llamada al sistema que se emplea para ejecutar un script y explica su funcionamiento
+2. ¿A qué se debe el error? ¿Y cómo podría arreglarse el problema?
+3.¿Cuál es la salida del script segundo_script.sh? ¿por qué aparecen 2 líneas en vez de una?
+4. Añade una nueva variable final_cadena que contenga la cadena: ",como estas?" e imprímela dentro del mismo comando echo.
+5. Si añadimos un subdirectorio en el directorio actual, ¿se produce algún error?
+
+
