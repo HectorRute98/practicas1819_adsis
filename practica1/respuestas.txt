@@ -1,7 +1,26 @@
 1. Busca la llamada al sistema que se emplea para ejecutar un script y explica su funcionamiento
+    La llamada al sistema es exec(). El intérprete bash reconoce el shibang del script y ejecuta un proceso hijo que hace exec 
+    (cualquiera de sus variantes), con bash como primer parámetro y el nombre del script como segundo.
+    
+    
 2. ¿A qué se debe el error? ¿Y cómo podría arreglarse el problema?
+    Se debe a que el script no tiene permiso de ejecución. se arregla con el comando chmod, concretamente chmod u+x.
+    
+    
 3.¿Cuál es la salida del script segundo_script.sh? ¿por qué aparecen 2 líneas en vez de una?
+    hola
+    mundo
+    Porque cada vez que se ejecuta echo, bash inserta un salto de linea y acepta el siguiente comando.
+    
+    
 4. Añade una nueva variable final_cadena que contenga la cadena: ",como estas?" e imprímela dentro del mismo comando echo.
+    #!/bin/bash
+    final_cadena=",como estas?"
+    for i in hola mundo 
+    do
+	    echo "${i}${final_cadena}"
+    done
 5. Si añadimos un subdirectorio en el directorio actual, ¿se produce algún error?
-
+    Cuando en el for se ejecuta el comando cat con entrada el nombre del directorio, muestra por pantalla 
+    " este fichero es un directorio"
 
