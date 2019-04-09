@@ -1,14 +1,16 @@
 #!/bin/bash
 #Nombre autor: Diego Marco
 #NIP autor: 755232
+#coms: Copia ficheros ejecutables del directorio actual a un directorio temporal en el directorio
+#      raiz del usuario. 
 #-----------------------------------busco directorios con mismo patron-------------------------
 dirs=$(find $HOME -name bin???)
 if [ -z "$dirs" ];then 
-  #caso ningun directorio con mismo patron
+  #caso ningun directorio con mismo patrón
   ruta=$(mktemp -d $HOME/binXXX)
   echo "Se ha creado el directorio $ruta"
 else
-  #caso uno o mas directorios con mismo patron
+  #caso uno o mas directorios con mismo patrón
   ruta=$(stat -c "%n,%Y" $dirs | sort -n -t , -k 2 | grep -o ".*," | tr -d "," | head -n 1)
   #1.stat -> directorios y tiempo última modificación:                           directorio1,45 \n directorio2,32
   #2.sort -> directorios ordenados, menor tiempo desde última modificacion       directorio2,32 \n directorio1,45

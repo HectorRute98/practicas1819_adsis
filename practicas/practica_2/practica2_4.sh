@@ -1,6 +1,7 @@
 #!/bin/bash
 #Nombre autor: Diego Marco
 #NIP autor: 755232
+#coms: muestra al usuario si primer caracter pulsado es una letra, numero o carácter especial
 
 #Leo primer caracter introducido de stdin
 echo -n "Introduzca una tecla: "
