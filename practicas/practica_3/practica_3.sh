@@ -18,20 +18,37 @@ if [ $? -eq 0 ];then
           #caso añadir usuarios
 	  echo "$lineas" | while read linea_add;do
 	     identifier=$(echo $linea_add | cut -d , -f 1)
-	     #identifier: identificador usuario -> fila linea_add, fichero $2
+	     #identifier: identificador usuario de la linea $linea_add
 	     password=$(echo $linea_add | cut -d , -f 2)
-	     #password: contraseña usuario -> fila linea_add, fichero $2
+	     #password: contraseña usuario de la linea $linea_add
 	     full_name=$(echo $linea_add | cut -d, -f 3)
-	     #full_name: nombre completo usuario -> fila linea_add, fichero $121
-	     if [ -z identifier ] || [ -z password ] || [ -z full_name ];then
-		 echo "Campo invalido"
+	     #full_name: nombre completo usuario de la linea $linea_add
+	     if [ -z $identifier ] || [ -z $password ] || [ -z $full_name ];then
+		 #caso alguno de los campos está vacío
+		 echo "Campo invalido" 
 		 exit 1
-             fi
+	     else
+		 #caso ningún campo vacío
+		 uid=$(id -u $identifier) &> /dev/null
+		 if [ -z $uid ];then
+		    #caso usuario no existe
+		    #añadimos usuario
+		    useradd -c "$full_name" -d "/home/$identifier" -f 0 -m  -k /etc/skel -K UID_MIN=1815 -U "$identifier"
+                    echo "$identifier:$password" | chpasswd
+                    passwd -x 30 "$identifier"
+		    echo "$full_name ha sido creado"
+		 else
+	            #caso usuario existe
+		    echo "El usuario $identifier ya existe"
+		 fi
+
+	     fi
+
+	     
 	  done
-       elif [ $1 = "-s" ];then
+        elif [ $1 = "-s" ];then
           #caso eliminar usuarios
-          mkdir /extra &> /dev/null
-          mkdir /extra/backup &> /dev/null
+          mkdir -p /extra/backup
  
           echo "$lineas" | while  read linea_del ;do
              identifier=$(echo $linea_del | cut -d , -f 1)
@@ -48,6 +65,9 @@ if [ $? -eq 0 ];then
           #caso primer parametro distinto de [-a|-b]
           echo "Opcion invalida" >&2
         fi
+      else
+      #caso $2 no es un fichero
+      exit 1
       fi 
    fi 
   exit 0
