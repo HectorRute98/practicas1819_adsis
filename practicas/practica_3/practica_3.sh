@@ -29,8 +29,7 @@ if [ $? -eq 0 ];then
 		 exit 1
 	     else
 		 #caso ningún campo vacío
-		 uid=$(id -u $identifier) &> /dev/null
-		 if [ -z $uid ];then
+		 if [ ! id -u $identifier ];then
 		    #caso usuario no existe
 		    #añadimos usuario
 		    useradd -c "$full_name" -d "/home/$identifier" -f 0 -m  -k /etc/skel -K UID_MIN=1815 -U "$identifier"
