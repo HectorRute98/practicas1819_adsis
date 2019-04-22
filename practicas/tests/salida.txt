@@ -1,0 +1,138 @@
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+Fmesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+.mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+.mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+.mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+Fmesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+.mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+.mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+.mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+.mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+.mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+.mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+F
+======================================================================
+FAIL: test_correct_user_list (__main__.TestPractica3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "./test_practica3.py", line 206, in test_correct_user_list
+    self.assertTrue(False)
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_login_users (__main__.TestPractica3)
+Try to su into the newly created users
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "./test_practica3.py", line 181, in test_login_users
+    self.assertTrue(False, msg='Unable to run su')
+AssertionError: Unable to run su
+
+======================================================================
+FAIL: test_sudo (__main__.TestPractica3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "./test_practica3.py", line 133, in test_sudo
+    self.assertTrue(False)
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 12 tests in 13.323s
+
+FAILED (failures=3)

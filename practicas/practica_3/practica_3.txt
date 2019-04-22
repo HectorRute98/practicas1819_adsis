@@ -8,3 +8,5 @@ a) Compruebo estado salida: cat /etc/shadow &> /dev/null
 b) Edito fichero de configuración /etc/sudoers con comando visudo.
    Añado la linea user ALL=(ALL) NOPASSWD: ALL, dentro del apartado 
    #User privilege specification
+
+
