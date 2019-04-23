@@ -1,111 +1,111 @@
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-Fmesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-.mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-.mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-.mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-Fmesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-.mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-.mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-.mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-.mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-.mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-.mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
-mesg: fallo de ttyname: Función ioctl no apropiada para el dispositivo
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+Fmesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+.mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+.mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+.mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+Fmesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+.mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+.mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+.mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+.mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+.mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+.mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
 F
 ======================================================================
 FAIL: test_correct_user_list (__main__.TestPractica3)
@@ -133,6 +133,6 @@ Traceback (most recent call last):
 AssertionError: False is not true
 
 ----------------------------------------------------------------------
-Ran 12 tests in 13.323s
+Ran 12 tests in 13.302s
 
 FAILED (failures=3)
