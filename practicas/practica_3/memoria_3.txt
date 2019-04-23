@@ -1,0 +1,33 @@
+#nombre autor:Diego Marco Beisty
+#nip autor: 755232
+
+MEMORIA PRÁCTICA 3
+
+    Al ejecutar el script practica_3.sh, este comprueba que el usuario puede
+ejecutar el comando cat en un fichero perteneciente a root, y por lo tanto
+tiene permisos de administración.
+
+Despueś se comprueba que se ha ejecutado con el número correcto de parámetros
+y que el primer parámetro es una de las opciones "-a" o "-s".
+
+En caso de que alguna comprobación no sea satisfactoria, se imprime el error
+correspondiente y finaliza la ejecución.
+
+Si el primer parámetro es "-a", el sript va a añadir los usuarios pasados en un fichero
+como segundo parámetro.
+Para cada línea del fichero se comprueba que existan los tres campos del usuario, en caso 
+contrario finaliza la ejecución. Después se comprueba que el usuario no exista en el sistema
+y se añade usando el comando useradd con las siguientes opciones: -c para incluir el nombre
+completo del usuario, -d para incluir el directorio principal, -f para desabilitar la cuenta 
+cuando caduque la contraseña, -k para añadir los ficheros de configuración, -K para definir el
+UID mínimo del nuevo usuario creado, -U para indicar el nombre del grupo al que va a pertenecer
+el nuevo usuario.
+Posteriormente se establece la nueva contraseña del usuario y su caducidad de 30 días.
+
+Si el primer parámetro es "-s", el script va a eliminar los usuarios pasados en un fichero como 
+segundo parámetro.
+Primero crea el fichero /extra/backup para guardar los usuarios a eliminar.
+Después para cada línea del fichero extrae el primer campo, bloquea la contraseña del usuario
+y hace el backup del home de usuario. 
+Finalmente, si ha realizado el backup satisfactoriamente, elimina al usuario mediante el comando
+userdel, con las opciones: -r para eliminar el home y -f para forzar el borrado.

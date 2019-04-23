@@ -27,7 +27,8 @@ if [ $? -eq 0 ];then
 		 exit 1
 	     else
 		 #caso ningún campo vacío
-		 if [ ! id -u "$identifier" ];then
+		 id -u "$identifier"
+		 if [ ! $? -eq 0  ];then
 		    #caso usuario no existe
 		    #añadimos usuario
 		    useradd -c "$full_name" -d "/home/$identifier" -f 0 -m  -k /etc/skel -K UID_MIN=1815 -U "$identifier"
@@ -49,19 +50,20 @@ if [ $? -eq 0 ];then
  
           echo "$lineas" | while  read linea_del ;do
              identifier=$(echo $linea_del | cut -d , -f 1)
-	     #Bloqueo cuenta de usuario
-	     usermod -L "$identifier"
+	         #Bloqueo contraseña de usuario
+	         usermod -L "$identifier"
              #comprimo directorio home de $user_name y hago backup
              tar -cf "$identifier.tar" "/home/$identifier" &> /dev/null 
              cp $identifier.tar /extra/backup/
              if [ $? -eq 0 ];then
-	       #caso se ha podido hacer el backup
+	          #caso se ha podido hacer el backup
                userdel -r -f $identifier &> /dev/null
              fi
           done
         else
           #caso primer parametro distinto de [-a|-b]
           echo "Opcion invalida" >&2
+          exit 1
         fi
    fi 
   exit 0
