@@ -27,13 +27,13 @@ if [ $? -eq 0 ];then
 		 exit 1
 	     else
 		 #caso ningún campo vacío
-		 id -u "$identifier"
+		 id -u "$identifier" &> /dev/null
 		 if [ ! $? -eq 0  ];then
 		    #caso usuario no existe
 		    #añadimos usuario
 		    useradd -c "$full_name" -d "/home/$identifier" -f 0 -m  -k /etc/skel -K UID_MIN=1815 -U "$identifier"
                     echo "$identifier:$password" | chpasswd
-                    passwd -x 30 "$identifier"
+                    passwd -x 30 "$identifier" &> /dev/null
 		    echo "$full_name ha sido creado"
 		 else
 	            #caso usuario existe
