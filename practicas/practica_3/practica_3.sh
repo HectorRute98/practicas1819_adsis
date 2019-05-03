@@ -1,6 +1,7 @@
 #!/bin/bash
 #nombre autor:Diego Marco Beisty
 #nip autor: 755232
+#Ejecución: practica_3.sh  [-a|-s] <fichero_usuarios> 
 cat /etc/shadow &> /dev/null
 #intento ejecutar cat sobre un fichero protegido como shadow
 #Compruebo el estado de salida del comando
