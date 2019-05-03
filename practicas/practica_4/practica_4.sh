@@ -40,13 +40,13 @@ if [ $? -eq 0 ];then
 		                    exit 1
 	                    else
 		                    #caso ningún campo vacío
-		                    id -u "$identifier" &> /dev/null
+		                     ssh -n -i ~/.ssh/id_as_ed25519 user@"$linea_ip" id -u "$identifier" &> /dev/null
 		                    if [ ! $? -eq 0  ];then
 		                        #caso usuario no existe
 		                        #añadimos usuario
-		                       useradd -c "$full_name" -d "/home/$identifier" -f 0 -m  -k /etc/skel -K UID_MIN=1815 -U "$identifier"
-                                echo "$identifier:$password" | chpasswd
-                                passwd -x 30 "$identifier" &> /dev/null
+		                       ssh -n -i ~/.ssh/id_as_ed25519 user@"$linea_ip" useradd -c "$full_name" -d "/home/$identifier" -f 0 -m  -k /etc/skel -K UID_MIN=1815 -U "$identifier"
+                                ssh -n -i ~/.ssh/id_as_ed25519 user@"$linea_ip"  echo "$identifier:$password" | chpasswd
+                                ssh -n -i ~/.ssh/id_as_ed25519 user@"$linea_ip"  passwd -x 30 "$identifier" &> /dev/null
 		                        echo "$full_name ha sido creado"
 		                    else
 	                            #caso usuario existe
@@ -56,17 +56,17 @@ if [ $? -eq 0 ];then
 	                done
                 elif [ $1 = "-s" ];then
                     #caso eliminar usuarios
-                    mkdir -p /extra/backup
+                    ssh -n -i ~/.ssh/id_as_ed25519 user@"$linea_ip"  mkdir -p /extra/backup
                     echo "$lineas" | while  read linea_del ;do
                         identifier=$(echo $linea_del | cut -d , -f 1)
 	                    #Bloqueo contraseña de usuario
-	                    usermod -L "$identifier"
+	                    ssh -n -i ~/.ssh/id_as_ed25519 user@"$linea_ip"  usermod -L "$identifier"
                         #comprimo directorio home de $user_name y hago backup
-                        tar -cf "$identifier.tar" "/home/$identifier" &> /dev/null
-                        cp $identifier.tar /extra/backup/
+                        ssh -n -i ~/.ssh/id_as_ed25519 user@"$linea_ip"  tar -cf "$identifier.tar" "/home/$identifier" &> /dev/null
+                       ssh -n -i ~/.ssh/id_as_ed25519 user@"$linea_ip"   cp $identifier.tar /extra/backup/
                         if [ $? -eq 0 ];then
 	                        #caso se ha podido hacer el backup
-                            userdel -r -f $identifier &> /dev/null
+                            ssh -n -i ~/.ssh/id_as_ed25519 user@"$linea_ip"  userdel -r -f $identifier &> /dev/null
                         fi
                     done
                 else
