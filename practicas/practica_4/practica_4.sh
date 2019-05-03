@@ -1,7 +1,7 @@
 #!/bin/bash
 #nombre autor:Diego Marco Beisty
 #nip autor: 755232
-#Ejecución: practica_4.sh  [-a|-s] <fichero_usuarios> <fichero_máquinas> 
+#Ejecución: practica_4.sh  [-a|-s] <fichero_usuarios> <fichero_máquinas>
 
 cat /etc/shadow &> /dev/null
 #intento ejecutar cat sobre un fichero protegido como shadow
@@ -23,7 +23,7 @@ if [ $? -eq 0 ];then
                 echo "$linea_ip no es accesible"
                 exit 1
             else
-                #caso se ha podido acceder a la máquina 
+                #caso se ha podido acceder a la máquina
                 lineas=$(cat $2)
                 if [ $1 = "-a" ];then
                     #caso añadir usuarios
@@ -36,7 +36,7 @@ if [ $? -eq 0 ];then
 	                    #full_name: nombre completo usuario de la linea $linea_add
 	                    if [ -z "$identifier" ] || [ -z "$password" ] || [ -z "$full_name" ];then
 		                    #caso alguno de los campos está vacío
-		                    echo "Campo invalido" 
+		                    echo "Campo invalido"
 		                    exit 1
 	                    else
 		                    #caso ningún campo vacío
@@ -56,13 +56,13 @@ if [ $? -eq 0 ];then
 	                done
                 elif [ $1 = "-s" ];then
                     #caso eliminar usuarios
-                    mkdir -p /extra/backup 
+                    mkdir -p /extra/backup
                     echo "$lineas" | while  read linea_del ;do
                         identifier=$(echo $linea_del | cut -d , -f 1)
 	                    #Bloqueo contraseña de usuario
 	                    usermod -L "$identifier"
                         #comprimo directorio home de $user_name y hago backup
-                        tar -cf "$identifier.tar" "/home/$identifier" &> /dev/null 
+                        tar -cf "$identifier.tar" "/home/$identifier" &> /dev/null
                         cp $identifier.tar /extra/backup/
                         if [ $? -eq 0 ];then
 	                        #caso se ha podido hacer el backup
@@ -75,9 +75,10 @@ if [ $? -eq 0 ];then
                     exit 1
                 fi
               fi
-            fi 
+            done
+            fi
             exit 0
-     else 
+     else
         #caso no tiene privilegios de administración
         echo "Este script necesita privilegios de administracion"
         exit 1
