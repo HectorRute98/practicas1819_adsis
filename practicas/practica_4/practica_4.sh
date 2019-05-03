@@ -17,7 +17,7 @@ if [ $? -eq 0 ];then
     lineas2=$(cat $3)
          echo "$lineas2" | while read linea_ip;do
             #intento conectarme a la máquina de ip "$linea_ip", ejecutando un comando por probar
-            ssh -n -i ~/.ssh/id_as_ed25519 user@"$linea_ip" pwd &> dev/null
+            ssh -n -i ~/.ssh/id_as_ed25519 user@"$linea_ip" pwd &> /dev/null
             if [ ! $? -eq 0 ];then
                 #caso no se ha podido conectar a la máquina
                 echo "$linea_ip no es accesible"
