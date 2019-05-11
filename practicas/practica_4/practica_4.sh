@@ -16,12 +16,13 @@ if [ $? -eq 0 ];then
     #------------GESTIÓN FICHERO IP's------------------------
     lineas2=$(cat $3)
          echo "$lineas2" | while read linea_ip;do
+			echo "hola"
             #intento conectarme a la máquina de ip "$linea_ip", ejecutando un comando por probar
-            ssh -n -i ~/.ssh/id_as_ed25519 user@"$linea_ip" pwd &> /dev/null
+            ssh -i ~/.ssh/id_as_ed25519 as@"$linea_ip" pwd &> /dev/null
             if [ ! $? -eq 0 ];then
                 #caso no se ha podido conectar a la máquina
                 echo "$linea_ip no es accesible"
-                exit 1
+               # exit 1
             else
                 #caso se ha podido acceder a la máquina
                 lineas=$(cat $2)
@@ -40,13 +41,13 @@ if [ $? -eq 0 ];then
 		                    exit 1
 	                    else
 		                    #caso ningún campo vacío
-		                     ssh -n -i ~/.ssh/id_as_ed25519 user@"$linea_ip" id -u "$identifier" &> /dev/null
+		                     ssh -i ~/.ssh/id_as_ed25519 as@"$linea_ip" id -u "$identifier" &> /dev/null
 		                    if [ ! $? -eq 0  ];then
 		                        #caso usuario no existe
 		                        #añadimos usuario
-		                       ssh -n -i ~/.ssh/id_as_ed25519 user@"$linea_ip" useradd -c "$full_name" -d "/home/$identifier" -f 0 -m  -k /etc/skel -K UID_MIN=1815 -U "$identifier"
-                                ssh -n -i ~/.ssh/id_as_ed25519 user@"$linea_ip"  echo "$identifier:$password" | chpasswd
-                                ssh -n -i ~/.ssh/id_as_ed25519 user@"$linea_ip"  passwd -x 30 "$identifier" &> /dev/null
+		                       ssh -i ~/.ssh/id_as_ed25519 as@"$linea_ip" sudo useradd -c "$full_name" -d "/home/$identifier" -f 0 -m  -k /etc/skel -K UID_MIN=1815 -U "$identifier"
+                                echo "$identifier:$password" | ssh -i ~/.ssh/id_as_ed25519 as@"$linea_ip" sudo chpasswd
+                                ssh -i ~/.ssh/id_as_ed25519 as@"$linea_ip" sudo passwd -x 30 "$identifier" &> /dev/null
 		                        echo "$full_name ha sido creado"
 		                    else
 	                            #caso usuario existe
@@ -56,17 +57,17 @@ if [ $? -eq 0 ];then
 	                done
                 elif [ $1 = "-s" ];then
                     #caso eliminar usuarios
-                    ssh -n -i ~/.ssh/id_as_ed25519 user@"$linea_ip"  mkdir -p /extra/backup
+                    ssh -i ~/.ssh/id_as_ed25519 as@"$linea_ip" sudo mkdir -p /extra/backup
                     echo "$lineas" | while  read linea_del ;do
                         identifier=$(echo $linea_del | cut -d , -f 1)
 	                    #Bloqueo contraseña de usuario
-	                    ssh -n -i ~/.ssh/id_as_ed25519 user@"$linea_ip"  usermod -L "$identifier"
+	                    ssh -i ~/.ssh/id_as_ed25519 as@"$linea_ip" sudo usermod -L "$identifier"
                         #comprimo directorio home de $user_name y hago backup
-                        ssh -n -i ~/.ssh/id_as_ed25519 user@"$linea_ip"  tar -cf "$identifier.tar" "/home/$identifier" &> /dev/null
-                       ssh -n -i ~/.ssh/id_as_ed25519 user@"$linea_ip"   cp $identifier.tar /extra/backup/
+                        ssh -i ~/.ssh/id_as_ed25519 as@"$linea_ip"  tar -cf "$identifier.tar" "/home/$identifier" &> /dev/null
+                       ssh -i ~/.ssh/id_as_ed25519 as@"$linea_ip"  sudo mv $identifier.tar /extra/backup/
                         if [ $? -eq 0 ];then
 	                        #caso se ha podido hacer el backup
-                            ssh -n -i ~/.ssh/id_as_ed25519 user@"$linea_ip"  userdel -r -f $identifier &> /dev/null
+                            ssh -i ~/.ssh/id_as_ed25519 as@"$linea_ip" sudo userdel -r -f $identifier &> /dev/null
                         fi
                     done
                 else
