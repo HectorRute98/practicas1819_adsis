@@ -15,7 +15,8 @@ if [ $? -eq 0 ];then
     #caso numero de parametros == 3
     #------------GESTIÓN FICHERO IP's------------------------
     lineas2=$(cat $3)
-         echo "$lineas2" | while read linea_ip;do
+   #      echo "$lineas2" | while read linea_ip;do
+          for linea_ip in $lineas2;do
 			echo "hola"
             #intento conectarme a la máquina de ip "$linea_ip", ejecutando un comando por probar
             ssh -i ~/.ssh/id_as_ed25519 as@"$linea_ip" pwd &> /dev/null
@@ -25,10 +26,11 @@ if [ $? -eq 0 ];then
                # exit 1
             else
                 #caso se ha podido acceder a la máquina
-                lineas=$(cat $2)
+              #  lineas=$(cat $2)
                 if [ $1 = "-a" ];then
                     #caso añadir usuarios
-	                echo "$lineas" | while read linea_add;do
+	             #   echo "$lineas" | while read linea_add;do
+	                 while read linea_add;do
 	                    identifier=$(echo $linea_add | cut -d , -f 1)
 	                    #identifier: identificador usuario de la linea $linea_add
 	                    password=$(echo $linea_add | cut -d , -f 2)
@@ -54,11 +56,12 @@ if [ $? -eq 0 ];then
 		                        echo "El usuario $identifier ya existe"
 		                    fi
 	                    fi
-	                done
+	                done < "$2"
                 elif [ $1 = "-s" ];then
                     #caso eliminar usuarios
                     ssh -i ~/.ssh/id_as_ed25519 as@"$linea_ip" sudo mkdir -p /extra/backup
-                    echo "$lineas" | while  read linea_del ;do
+                  #  echo "$lineas" | while  read linea_del ;do
+                     while read linea_del;do
                         identifier=$(echo $linea_del | cut -d , -f 1)
 	                    #Bloqueo contraseña de usuario
 	                    ssh -i ~/.ssh/id_as_ed25519 as@"$linea_ip" sudo usermod -L "$identifier"
@@ -69,7 +72,7 @@ if [ $? -eq 0 ];then
 	                        #caso se ha podido hacer el backup
                             ssh -i ~/.ssh/id_as_ed25519 as@"$linea_ip" sudo userdel -r -f $identifier &> /dev/null
                         fi
-                    done
+                    done < "$2"
                 else
                     #caso primer parametro distinto de [-a|-b]
                     echo "Opcion invalida" >&2
