@@ -7,7 +7,7 @@ Nip: 755232
 Una vez tengo definida una red de tipo "Host-Only-Network". La máquina host (que en mi caso será mi máquina física), tiene la ip 192.168.56.1. Procedo a incluir los adaptadores de esta red en las máquinas virtuales debian-ghest1 y debian-ghest2. 
 
 ## Parte 2: Configuración de las máquinas virtuales
-1. Instalo sudo con el comando `sudo apt-get install sudo` y con el comando `visudo`, configuro el fichero  
+1. Instalo sudo con el comando `sudo apt-get install sudo`,  y con el comando `visudo` configuro el fichero  
 **/etc/sudo/sudoers** añadiendo la línea *as ALL=(ALL)NOPASSWD:ALL*, para que el usuario as pueda ejecutar cualquier
 comando sin necesidad de introducir contraseña.
 2. Diagrama de red (Host-Only-Network):
@@ -48,3 +48,4 @@ Primero generamos la clave pública y privada en el host, `ssh-keygen -t ed25519
 -t indica el algoritmo de cifrado, -f indica el fichero destino.
 Después compartimos la clave pública con la máquina ghest1: `ssh-copy-id -i ~/.ssh/id_as_ed25519 as@192.168.56.2`.
 Finalmente con la máquina ghest2:`ssh-copy-id -i ~/.ssh/id_as_ed25519 as@192.168.56.3`.
+-i indica la ruta del fichero.
