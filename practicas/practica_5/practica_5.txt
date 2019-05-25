@@ -1,0 +1,28 @@
+Autor: Diego Marco 
+Nip: 755232
+
+PARTE 1:
+1.Añado segundo disco a la máquina debian-ghest1 (sdb) usando la interfaz de virtualbox.
+2.Creo la tabla de partición tipo GUID: sudo parted /dev/sdb mklabel gpt
+3.Creo la primera partición usando la versión interactiva de parted: mkpart P1 1Mb 16Mb
+4.Creo la segunda partición igual que la primera: mkpart P2 17Mb 32Mb
+5.Creo el sistema de ficheros del tipo ext3 para la partición P1: sudo mkfs -t ext3 /dev/sdb1
+6.Creo el sistema de ficheros del tipo ext4 para la partición P2: sudo mkfs -t ext3 /dev/sdb2
+7. Monto las dos particiones en un fichero vacío:
+sudo mount -t ext3 /dev/sdb1 ~/Part1
+sudo moount -t ext4 /dev/sdb2 ~/Part2
+8.Finalmente añado al final del fichero fstab: 
+/dev/sdb1 /home/as/part ext3 defaults 0 2
+/dev/sdb2 /home/as/part2 ext4 defaults 0 2
+
+PARTE 2:
+
+PARTE 3:
+    APARTADO 1:
+    1. Añado disco 16Mb (sdc)
+    2. Creo la tabla de partición GUID: parted /dev/sdc mklabel gpt
+    3. Creo una partición que ocupa todo sdc: mkpart Primary 1Mb 16Mb
+    4.Tipo de partición Linux LVM: con parted uso set 1 lvm on
+    5. Creo volumen físico: sudo pvcreate /dev/sdc1
+    6.Creo grupo volumen a partir del volumen físico creado: sudo vgcreate vg_p5 /dev/sdc1
+    6.Comprobación del script con vgdisplay para comprobar que se ha ampliado la capacidad del grupo volumen. pvs -o+pv_used para comprobar que se han añadido los volúmenes físicos al grupo volumen
