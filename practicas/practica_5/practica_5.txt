@@ -26,3 +26,7 @@ PARTE 3:
     5. Creo volumen físico: sudo pvcreate /dev/sdc1
     6.Creo grupo volumen a partir del volumen físico creado: sudo vgcreate vg_p5 /dev/sdc1
     6.Comprobación del script con vgdisplay para comprobar que se ha ampliado la capacidad del grupo volumen. pvs -o+pv_used para comprobar que se han añadido los volúmenes físicos al grupo volumen
+    APARTADO2:
+    1. Comprobación del script con lvscan antes y después de su ejecución para comprobar que el tamaño del volumen lógico cambia
+    2. Comprobación del script con sfdisk antes y después de su ejecución para mirar que el tamaó del sistema de ficheros ha cambiado.
+    3.Comprobación de que se ha añadido el volumen lógico al fichero /etc/fstab
