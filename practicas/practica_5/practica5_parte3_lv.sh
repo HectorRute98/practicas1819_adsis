@@ -8,7 +8,6 @@
 OldIFS=$IFS #Guardo el Internal Field Separator
 IFS=$',' #Nuevo valor por defecto ','
 read nombreGrupoVolumen nombreVolumenLogico tamano tipoSistemaFicheros directorioMontaje
-IFS=OldIFS # Reestablezco el antiguo valor por defecto
 while [ ! -z $nombreGrupoVolumen ];do
 #primer campo no vacío
     existeVG=$(sudo vgscan | grep "$nombreGrupoVolumen")
@@ -16,7 +15,7 @@ while [ ! -z $nombreGrupoVolumen ];do
         #caso no existe el grupo volumen
         echo "No existe el grupo volumen $nombreGrupoVolumen"
     fi >&2
-    existeVL=$(sudo lgscan | grep "$nombreVolumenLogico")
+    existeVL=$(sudo lvscan | grep "$nombreVolumenLogico")
     if [ -z "$existeVL" ];then
         #caso no existe el volumen logico => lo creo
         #creo el volumen lógico
@@ -26,7 +25,7 @@ while [ ! -z $nombreGrupoVolumen ];do
         #monto el volumen logico
         sudo mount -t "$tipoSistemaFicheros" /dev/"$nombreGrupoVolumen"/"$nombreVolumenLogico" "$directorioMontaje"
         #lo añado al fichero /etc/fstab para que se monte en cada inicio del sistema
-        sudo echo "dev/$nombreGrupoVolumen"/"$nombreVolumenLogico" "$directorioMontaje" "$tipoSistemaFicheros" defaults  0 2\n >> /etc/fstab
+        sudo echo "dev/$nombreGrupoVolumen"/"$nombreVolumenLogico" "$directorioMontaje" "$tipoSistemaFicheros" "defaults  0 2\n" >> /etc/fstab
     else
         #caso existe el volumen logico => lo expando
         #Extiendo volumen logico
@@ -37,4 +36,5 @@ while [ ! -z $nombreGrupoVolumen ];do
 read nombreGrupoVolumen nombreVolumenLogico tamano tipoSistemaFicheros directorioMontaje
 done
 #primer campo vacío, termina la ejecucion
+IFS=OldIFS # Reestablezco el antiguo valor por defecto
 exit 0

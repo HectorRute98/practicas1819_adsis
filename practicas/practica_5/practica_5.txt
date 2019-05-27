@@ -16,7 +16,9 @@ sudo moount -t ext4 /dev/sdb2 ~/Part2
 /dev/sdb2 /home/as/part2 ext4 defaults 0 2
 
 PARTE 2:
-
+ 1.Compruebo los discos duros disponibles y sus tamaños en bloques con sfdisk -s
+2.Compruebo las particiones y sus tamaños con sfdisk -l.
+3.Compruebo la informacion de montaje de sistemas de ficheros, salco tmps, con df -hT
 PARTE 3:
     APARTADO 1:
     1. Añado disco 16Mb (sdc)
@@ -28,5 +30,5 @@ PARTE 3:
     6.Comprobación del script con vgdisplay para comprobar que se ha ampliado la capacidad del grupo volumen. pvs -o+pv_used para comprobar que se han añadido los volúmenes físicos al grupo volumen
     APARTADO2:
     1. Comprobación del script con lvscan antes y después de su ejecución para comprobar que el tamaño del volumen lógico cambia
-    2. Comprobación del script con sfdisk antes y después de su ejecución para mirar que el tamaó del sistema de ficheros ha cambiado.
-    3.Comprobación de que se ha añadido el volumen lógico al fichero /etc/fstab
+    2. Comprobación del script con sfdisk -s antes y después de su ejecución para mirar que el tamaó del sistema de ficheros ha cambiado.
+    3.Comprobación de que se ha añadido el volumen lógico al fichero /etc/fstab y que consta en el fichero /etc/mtab
