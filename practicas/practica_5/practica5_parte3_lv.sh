@@ -4,6 +4,9 @@
 #Nip: 755232
 #Coms: A partir de una especificacion obtenida de la entrada estandar, puede crear o extender
 #      los volúmenes lógicos y sistemas de ficheros que residan en dichos volumenes
+#Comprobación del script: lvscan -> tamaño del volumen logico cambia
+#                         sfdisk -s -> tamaño del sistema de ficheros cambia
+#                         /etc/fstab -> aparece nueva linea
 #----------------------------------------------------------------------------------------
 OldIFS=$IFS #Guardo el Internal Field Separator
 IFS=$',' #Nuevo valor por defecto ','

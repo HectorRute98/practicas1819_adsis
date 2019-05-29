@@ -1,7 +1,11 @@
 #!/bin/bash
+#--------------------------------------------------------------------------------------------
 #Autor: Diego Marco 
 #Nip:755232
-
+#Comentarios: Extiende un grupo volumen existente con una o mas particiones
+#Comprobación script: vgdisplay -> Se ha ampliado la capacidad del grupo volumen
+#                      pvs -o+pv_used para comprobar los volumenes fisicos del grupo volume
+#---------------------------------------------------------------------------------------------
 if [ $# -lt 2 ];then
 	#caso numero de parametros incorrecto
 	echo "$0 <grupo volumen <particion> {particion}"
@@ -15,6 +19,7 @@ if [ -z "$existe" ];then
 	echo "No existe el grupo volumen $1"
 	exit 1
 fi >&2
+#caso existe el grupo volumen
 volumen="$1" #guardo el grupo volumen
 shift #Elimino primer elemento de la lista (grupo volumen)
 for particion in "$@";do

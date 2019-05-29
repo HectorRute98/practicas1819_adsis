@@ -16,7 +16,6 @@ if [ $? -eq 0 ];then
     #------------GESTIÓN FICHERO IP's------------------------
     lineas2=$(cat $3)
           for linea_ip in $lineas2;do
-			echo "hola"
             #intento conectarme a la máquina de ip "$linea_ip", ejecutando un comando por probar
             ssh -i ~/.ssh/id_as_ed25519 as@"$linea_ip" pwd &> /dev/null
             if [ ! $? -eq 0 ];then
@@ -33,15 +32,15 @@ if [ $? -eq 0 ];then
 	                    #identifier: identificador usuario de la linea $linea_add
 	                    password=$(echo $linea_add | cut -d , -f 2)
 	                    #password: contraseña usuario de la linea $linea_add
-	                    full_name=$(echo $linea_add | cut -d, -f 3)
+	                    full_name=$(echo $linea_add | cut -d , -f 3)
 	                    #full_name: nombre completo usuario de la linea $linea_add
-	                    if [ -z "$identifier" ] || [ -z "$password" ] || [ -z "$full_name" ];then
+	                    if [ -z "$identifier" ] || [ -z "$password" ] || [ -z "$full_name" ];then                    
 		                    #caso alguno de los campos está vacío
 		                    echo "Campo invalido"
 		                    exit 1
 	                    else
 		                    #caso ningún campo vacío
-		                     ssh -i ~/.ssh/id_as_ed25519 as@"$linea_ip" id -u "$identifier" &> /dev/null
+		                     ssh -i ~/.ssh/id_as_ed25519 as@"$linea_ip" sudo id -u "$identifier" &> /dev/null
 		                    if [ ! $? -eq 0  ];then
 		                        #caso usuario no existe
 		                        #añadimos usuario
@@ -63,7 +62,7 @@ if [ $? -eq 0 ];then
 	                    #Bloqueo contraseña de usuario
 	                    ssh -i ~/.ssh/id_as_ed25519 as@"$linea_ip" sudo usermod -L "$identifier"
                         #comprimo directorio home de $user_name y hago backup
-                        ssh -i ~/.ssh/id_as_ed25519 as@"$linea_ip"  tar -cf "$identifier.tar" "/home/$identifier" &> /dev/null
+                        ssh -i ~/.ssh/id_as_ed25519 as@"$linea_ip"  sudo tar -cf "$identifier.tar" "/home/$identifier" &> /dev/null
                        ssh -i ~/.ssh/id_as_ed25519 as@"$linea_ip"  sudo mv $identifier.tar /extra/backup/
                         if [ $? -eq 0 ];then
 	                        #caso se ha podido hacer el backup
