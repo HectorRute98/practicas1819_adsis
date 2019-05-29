@@ -3,9 +3,9 @@
 #Nip: 755232
 
 echo -n "Nº usuarios: "
-uptime | sed -E 's/ +/;/g' | cut -d ";" -f 5
+uptime | cut -d "," -f 2 | cut -d " " -f 3
 echo -n "carga media de trabajo:"
-uptime | cut -d ":" -f 5 
+uptime | cut -d ":" -f 4
 echo -n "Memoria ocupada: "
 free --mega | grep Mem | sed -E 's/\s+/ MB;/g' | cut -d ";" -f 3
 echo -n "Memoria libre: "
