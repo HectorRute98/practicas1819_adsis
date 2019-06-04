@@ -1,1 +1,7 @@
-
+Nº usuarios: [0-4]
+Carga media de trabajo: 0,0[0-2], 0,[0-1]0, 0,0[0-5]
+Memoria ocupada: [0-1][0-9] MB
+Memoria libre: [5-9][0-9][0-9] MB
+swap utilizado: [0-9] MB
+Número de puertos abiertos: [0-4]
+Conexiones establecidas: [0-2]
