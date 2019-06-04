@@ -1,1 +1,37 @@
+File: practica6.txt
+Autor: Diego Marco
+Nip: 755232
+***************************************************************************
+PARTE 1
+***************************************************************************
+1. Programo el script practica6_parte1.sh
 
+2. Modifico fichero /etc/rsyslog.conf en debian-guest1 
+   (debian-guest1 transmite la info a debian-guest2)
+        2.1 Añado linea => local0.info      @@192.168.56.3
+        2.2 Reinicio servicio => systemctl restart rsyslog
+        
+3. Modifico fichero /etc/rsyslog.conf en debian-guest2
+    (debian-guest2 recibe la info propia y de debian-guest2)
+        3.1 Descomento => module (load="imudp")
+                          input(type="imudp" port="514")
+                          ------------------------------
+                          module(load="imtcp")
+                          input(type="imtcp" port="514")
+        3.2 Añado linea => local0.info   -/var/log/monitorizacion
+        3.3 Reinicio servicio => systemctl restart rsyslog
+        
+4. Uso cron para ejecutar periódicamente cada minuto el comando "./practica6_parte1.sh | loggger -p local0.info". Modifico el fichero /etc/crontab.
+        4.1 Añado linea => * *  * * *  as  /home/practicas_1819/practicas/practica_6/practica6_parte1.sh | logger -p local0.info
+
+***************************************************************************
+PARTE 2
+***************************************************************************
+1. Descargo logcheck => sudo apt-get install logcheck
+
+2. Añado la linea /var/log/monitorizacion en el fichero /etc/logcheck/logcheck.files para poder aplicarle la reglas del fichero monitorization_rules
+
+3. Edito /etc/logcheck/logcheck.conf, SENDMAILTO="root" para indicar que el destino de los mails es el usuario root.
+
+4. Añado el fichero monitorization_rules al directorio /etc/logcheck/ignore.d.srver/
+       
