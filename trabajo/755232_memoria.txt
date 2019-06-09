@@ -1,0 +1,188 @@
+# Autor: Diego Marco Beisty
+# Nip: 755232
+# Archivo: memoria.txt
+# Coms: Memoria del trabajo obligatorio de la asignatura 
+#       Administración de Sistemas
+
+#------------------------------Preparación máquinas--------------------------
+1. Copio el S.O suministrado:   scp a755232@central.cps.unizar.es:/misc/usuarios/gvalles/as-tpf-1819.ova
+                                /home/diego/Desktop
+2.Importo el archivo as-tpf-1819.ova a VirtualBox.
+3.A partir de la nueva máquina importada creo 6 clones diferenciales con la opción "clonación enlazada".(debian1-6)
+
+#-----------------------------DECISIONES PREVIAS------------------------------
+network 192.168.0.0   (Red Interna 1)
+    debian1 192.168.0.1
+    debian2 192.168.0.2
+network 192.168.64.0  (Red Interna 2)
+    debian1 192.168.64.1
+    debian3 y debian4 tendrán IP dinámicas entre 192.168.64.2 y 192.168.64.10
+    debian6 192.168.64.11
+network 192.168.128.0 (Red Interna 3)
+    debian5 192.168.128.1
+    debian6 192.168.128.2
+network 192.168.56.0  (Host-only network)
+    debian1 192.168.56.2
+    Host 192.168.56.1
+#------------------------------Red interna 1----------------------------------
+1.Añado a debian1 y debian 2 un adaptador de red interna desde VirtualBox, llamado "red1".
+2. Añado en fichero /etc/network/interfaces:
+    Debian1:
+        auto enp0s8
+        iface enp0s8 inet static
+        address 192.168.0.1
+        netmask 255.255.255.0
+        broadcast 192.168.0.255
+        network 192.168.0.0
+    Debian2:
+        auto enp0s8
+        iface enp0s8 inet static
+        address 192.168.0.2
+        netmask 255.255.255.0
+        broadcast 192.168.0.255
+        network 192.168.0.0
+        gateway 192.168.0.1
+3. Relanzo los servicios de red en debian1 y debian2
+    service networking restart
+4. Hago ping desde debian1 a ip 192.168.0.2 (responde).
+5. Hago ping desde debian2 a ip 192.168.0.1 (responde). 
+    
+#-----------------------------Red Host-only network----------------------------
+1. Añado a debian 1 un adaptador de red Host-only network desde virtualBox
+2. Añado en fichero /etc/networking/interfaces:
+        auto enp0s9
+        iface enp0s9 inet static
+        address 192.168.56.2
+        netmask 255.255.255.0
+        broadcast 192.168.56.255
+        network 192.168.56.0
+3. Relanzo los servicios de red en debian1 
+        service networking restart
+4. Hago ping desde host a la ip 192.168.56.2 (responde).
+
+#-----------------------------Red interna 2------------------------------------
+1. Añado a debian 1, debian 3, debian 4 y debian 6 un adaptador de red interna "red2"  
+2. Instalo el servidor dhcp en debian 1: sudo apt-get install isc-dhcp-server
+3. Edito el fichero: /etc/default/isc-dhcp-servver
+        INTERFACES="enp0s10"
+4. Configuro el fichero etc/dhcp/dhcp.conf en debian 1:
+        subnet 192.168.64.0 netmask 255.255.255.0 {
+          range 192.168.64.2 192.168.64.10;
+          option broadcast-address 192.168.64.255;
+          option routers 192.168.64.1;
+        }
+5.Reinicio el demonio dhcpd:
+        sudo /etc/init.d/isc-dhcp-server restart
+        
+5.Añado en fichero /etc/networking/interfaces:
+    Debian 1:
+            auto enp0s10
+            iface enp0s10 inet static
+            address 192.168.64.1
+            netmask 255.255.255.0
+            broadcast 192.168.64.255
+            network 192.168.64.0
+    Debian 3:
+            auto enp0s8
+            iface enp0s8 inet dhcp
+    Debian 4:
+            auto enp0s8
+            iface enp0s8 inet dhcp
+    Debian 6:
+            auto enp0s8
+            iface enp0s8 inet static
+            address 192.168.64.11
+            netmask 255.255.255.0
+            broadcast 192.168.64.255
+            network 192.168.64.0
+            gatewat 192.168.64.1
+6. Relanzo los servicios de red en debian1, debian3, debian4 y debian 6 
+    service networking restart  
+
+#-----------------------------Red interna 3------------------------------------
+1. Añado a debian 5 y a debian 6 un adaptador de red interna llamado "red3" 
+2. Añado en fichero /etc/networking/interfaces:
+    Debian 5:
+            auto enp0s8
+            iface enp0s8 inet static
+            address 192.168.128.1
+            netmask 255.255.255.0
+            broadcast 192.168.128.255
+            network 192.168.128.0
+            gateway 192.168.128.2
+    Debian 6:
+            auto enp0s9
+            iface enp0s9 inet static
+            address 192.168.128.2
+            netmask 255.255.255.0
+            broadcast 192.168.128.255
+            network 192.168.128.0
+3. Relanzo los servicios de red en debian 5 y debian 6 
+    service networking restart  
+
+#-----------------------------Configuración routing---------------------------
+En debian 1:
+1. Edito el fichero /etc/sysctl.conf descomentando la línea "net.ip4.ip_forward = 1"
+2. Añado en el fichero /etc/network/interfaces en la interfaz enp0s10 (red2)la línea: 
+    up route add -net 192.168.128.0 netmask 255.255.255.0 gw 192.168.64.11
+3. Actualizo los cambios: sysctl -p /etc/sysctl.conf, service networking restart
+
+En debian 6:
+1. Edito el fichero /etc/sysctl.conf descomentando la línea "net.ip4.ip_forward = 1"
+2. Actualizo los cambios: sysctl -p /etc/sysctl.conf
+
+Pruebo a hacer ping en todas las máquinas para comprobar que hay comunicación.
+
+#-----------------------------instalación servidor web/servidor ssh-----------
+1.Instalo el servidor apache en debian 2: sudo apt-get install apache2
+2.Compruebo que está corriendo: netstat -lp | grep 'apache2'
+3.Instalo el servidor sshd: sudo apt-get install openssh-server
+3.Compruebo que está corriendo: netstat -lp | grep 'sshd'
+
+#-----------------------------Configuración firewall--------------------------
+1.Para hacer persistentes las reglas de iptables instalo:
+    sudo apt-get install iptables-persistent
+2. Ejecuto las siguientes reglas:
+   
+   #limpio todas la reglas de la tabla filter y nat:
+   iptables -F
+   iptables -F -t nat
+   
+   #Establezco la política por defecto:
+   iptables -P INPUT DROP
+   iptables -P FORWARD DROP
+   iptables -P OUTPUT ACCEPT
+   
+   #Permito todo el tráfico intranet:
+   iptables -A FORWARD -i enp0s8 -j ACCEPT
+   iptables -A FORWARD -0 enp0s8 -j ACCEPT
+   iptables -A FORWARD -i enp0s10 -j ACCEPT
+   iptables -A FORWARD -0 enp0s10 -j ACCEPT
+   
+   #Permito tráfico de salida hacia el host:
+   iptables -A FORWARD -o enp0s9 -j ACCEPT
+   
+   #Permito todo tráfico de salida A Internet:
+   iptables -t nat -A POSTROUTING -o enp0s3 -j SNAT --to 10.0.2.15
+   
+   #Permito tráfico de Internet al servidor web en debian 2:
+   iptables -t nat -A PREROUTING -i enp0s3 -p tcp --dport 80 -j DNAT --to 192.168.0.2:80
+   iptables -A FORWARD -i enp0s3 -p tcp --dport 80 -d 192.168.0.2 -j ACCEPT
+   
+   #Permito tráfico del host al servidor web en debian 2:
+   iptables -A FORWARD -i enp0s9 -p tcp --dport 80 -d 192.168.0.2 -j ACCEPT
+   
+   #Permito tráfico de internet al servidor ssh en debian 5:
+   iptables -t nat -A PREROUTING -i enp0s3 -p tcp --dport 22 -j DNAT --to 192.168.128.1:22
+   iptables -A FORWARD -i enp0s3 -p tcp --dport 22 -d 192.168.128.1 -j ACCEPT
+   
+   #Permito tráfico del host al servidor ssh en debian 5:
+   iptables -A FORWARD -i enp0s9 -p tcp --dport 22 -d 192.168.128.1 -j ACCEPT
+   
+   #La máquina debian 1 contesta a ping de intranet, no de host:
+   iptables -A INPUT -i enp0s8 -p icmp --icmp-type echo-request -j ACCEPT
+   iptables -A INPUT -i enp0s10 -p icmp --icmp-type echo-request -j ACCEPT
+    
+    
+3.Guardo estas reglas en el fichero rules.v4 para que se ejecuten en cada inicio: 
+    iptables-save > /etc/iptables/rules.v4
